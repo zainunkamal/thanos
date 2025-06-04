@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: thanos-objectstorage
+  namespace: thanos
+type: Opaque
+stringData:
+  thanos.yaml: |
+    type: s3
+    config:
+      bucket: "prometheus-metrics"
+      endpoint: "10.100.1.91:9000"
+      access_key: "GkAkjehPDptlZTduhENh"
+      secret_key: "9VsSihi90h6d2Ra55FPG43tcNFxyzKW87xnbpyKx"
+      insecure: true
